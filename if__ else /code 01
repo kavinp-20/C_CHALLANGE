@@ -1,6 +1,9 @@
 #include <stdio.h>
 
-int main() {
+int main() 
+
+
+{
     int marks;
 
     printf("Enter student marks (0-100): ");
