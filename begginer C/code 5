@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    scanf("%d", &num);
+
+    num = num / 6;
+
+    printf("Output: %d", num);
+    return 0;
+}
+
+Input: 30
+Output: 5
