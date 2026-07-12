@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, tens;
+
+    scanf("%d", &n);
+
+    tens = n / 10;
+
+    printf("Output: %d", tens);
+
+    return 0;
+}
+
+Input: 45
+Output: 4
