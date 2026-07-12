@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, hundred;
+
+    scanf("%d", &n);
+
+    hundred = n / 100;
+
+    printf("Output: %d", hundred);
+
+    return 0;
+}
+
+Input: 569
+Output: 5
