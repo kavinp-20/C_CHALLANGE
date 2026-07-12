@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, ones;
+
+    scanf("%d", &n);
+
+    ones = n % 10;
+
+    printf("Output: %d", ones);
+
+    return 0;
+}
+
+Input: 56
+Output: 6
