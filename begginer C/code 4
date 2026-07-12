@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, rem;
+
+    scanf("%d", &n);
+
+    rem = n % 8;
+
+    printf("Output: %d", rem);
+
+    return 0;
+}
+
+Input: 45
+Output: 5
