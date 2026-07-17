@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main()
+{
+    float cm;
+
+    printf("Enter the value in cm: ");
+    scanf("%f", &cm);
+
+    printf("%.2f centimeters is equal to %.2f meters.\n", cm, cm / 100);
+
+    return 0;
+}
