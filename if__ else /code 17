@@ -13,3 +13,6 @@ int main()
 
     return 0;
 }
+
+Enter length in cm: 320
+Meter = 3.20
