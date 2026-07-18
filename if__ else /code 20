@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    printf("Enter two integers: ");
+    scanf("%d %d", &a, &b);
+
+    // Both are positive odd integers
+    if (a > 0 && b > 0 && a % 2 != 0 && b % 2 != 0) {
+        printf("Output: %d\n", a + b);
+        printf("Both numbers are positive odd integers.\n");
+    }
+
+    // Both are negative even integers
+    else if (a < 0 && b < 0 && a % 2 == 0 && b % 2 == 0) {
+        printf("Output: %d\n", a + b);
+        printf("Both numbers are negative even integers.\n");
+    }
+
+    // All other cases
+    else {
+        printf("Invalid combination!\n");
+
+        if ((a > 0 && b < 0) || (a < 0 && b > 0))
+            printf("Reason: One number is positive and the other is negative.\n");
+
+        else if ((a % 2 == 0 && b % 2 != 0) || (a % 2 != 0 && b % 2 == 0))
+            printf("Reason: One number is even and the other is odd.\n");
+
+        else if (a > 0 && b > 0)
+            printf("Reason: Both are positive, but not both odd.\n");
+
+        else if (a < 0 && b < 0)
+            printf("Reason: Both are negative, but not both even.\n");
+
+        else
+            printf("Reason: Input does not satisfy the required conditions.\n");
+    }
+
+    return 0;
+}
