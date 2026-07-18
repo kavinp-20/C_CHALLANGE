@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int main()
+{
+    int accno, choice;
+    char name[30], type[20];
+    float balance, amount;
+
+    printf("Enter Account Number: ");
+    scanf("%d", &accno);
+
+    printf("Enter Customer Name: ");
+    scanf("%s", name);
+
+    printf("Enter Account Type: ");
+    scanf("%s", type);
+
+    printf("Enter Balance: ");
+    scanf("%f", &balance);
+
+    printf("\n1.Deposit\n2.Withdraw\n3.Balance Enquiry\n");
+    printf("Enter Choice: ");
+    scanf("%d", &choice);
+
+    switch(choice)
+    {
+        case 1:
+            printf("Enter Deposit Amount: ");
+            scanf("%f", &amount);
+            balance += amount;
+            printf("Updated Balance = %.2f", balance);
+            break;
+
+        case 2:
+            printf("Enter Withdraw Amount: ");
+            scanf("%f", &amount);
+
+            if(amount <= balance)
+            {
+                balance -= amount;
+                printf("Updated Balance = %.2f", balance);
+            }
+            else
+            {
+                printf("Insufficient Balance");
+            }
+            break;
+
+        case 3:
+            printf("Current Balance = %.2f", balance);
+            break;
+
+        default:
+            printf("Invalid Choice");
+    }
+
+    return 0;
+}
