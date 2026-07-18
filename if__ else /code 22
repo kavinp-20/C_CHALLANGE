@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main()
+{
+    int id;
+    char name[30];
+    float basic, hra, da, pf, gross, tax, net;
+
+    printf("Enter Employee ID: ");
+    scanf("%d", &id);
+
+    printf("Enter Employee Name: ");
+    scanf("%s", name);
+
+    printf("Enter Basic Salary: ");
+    scanf("%f", &basic);
+
+    hra = basic * 0.20;
+    da = basic * 0.40;
+    pf = basic * 0.12;
+
+    gross = basic + hra + da;
+
+    if (gross > 50000)
+        tax = gross * 0.10;
+    else
+        tax = gross * 0.05;
+
+    net = gross - pf - tax;
+
+    printf("\nEmployee ID : %d", id);
+    printf("\nEmployee Name : %s", name);
+    printf("\nGross Salary : %.2f", gross);
+    printf("\nNet Salary : %.2f", net);
+
+    return 0;
+}
